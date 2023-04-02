@@ -230,10 +230,10 @@
                 }).then(response => {
                     if (response.ok) {
                         status.innerHTML = "Thanks for your submission!";
-                        document.getElementById('form-control-input').value = '';
                         form.reset()
                     } else {
                         response.json().then(data => {
+                            console.log(data);
                             if (Object.hasOwn(data, 'errors')) {
                                 status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
                             } else {
