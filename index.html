@@ -100,15 +100,17 @@
                             </p>
 
                             <!-- Sign Up Form -->
-                            <!-- <form>
+                            <form id="mailinglist-form" action="https://formspree.io/f/xqkoyyne" method="POST">
                                 <div class="form-group">
-                                    <input type="email" class="form-control-input" id="semail" required>
+                                    <input type="email" name="email" class="form-control-input" id="semail" required>
                                     <label class="label-control" for="semail">Email address</label>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="form-control-submit-button">Start free trial</button>
+                                    <button type="submit" class="form-control-submit-button">Join the mailing
+                                        list</button>
                                 </div>
-                            </form> -->
+                                <p id="my-form-status"></p>
+                            </form>
                             <!-- end of sign up form -->
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
@@ -195,7 +197,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p class="p-small">Copyright © Ed Tech Privacy Project</p>
+                        <p class="p-small">Copyright © Ed Tech Privacy</p>
                     </div> <!-- end of col -->
                 </div> <!-- enf of row -->
             </div> <!-- end of container -->
@@ -210,6 +212,41 @@
         <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
         <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
         <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+        <!-- FreeForms -->
+        <script>
+            var form = document.getElementById("mailinglist-form");
+
+            async function handleSubmit(event) {
+                event.preventDefault();
+                var status = document.getElementById("my-form-status");
+                var data = new FormData(event.target);
+                fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        status.innerHTML = "Thanks for your submission!";
+                        document.getElementById('form-control-input').value = '';
+                        form.reset()
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                            } else {
+                                status.innerHTML = "Oops! There was a problem submitting your form"
+                            }
+                        })
+                    }
+                }).catch(error => {
+                    status.innerHTML = "Oops! There was a problem submitting your form"
+                });
+            }
+            form.addEventListener("submit", handleSubmit)
+        </script>
 
     </body>
 
