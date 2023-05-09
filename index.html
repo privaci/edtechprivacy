@@ -27,10 +27,12 @@
             href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
             rel="stylesheet">
         <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/fontawesome-all.css" rel="stylesheet">
         <link href="css/swiper.css" rel="stylesheet">
         <link href="css/magnific-popup.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
+        <link href="css/styles_zinc.css" rel="stylesheet">
 
         <!-- Favicon  -->
         <link rel="icon" href="images/favicon.png">
@@ -58,14 +60,14 @@
                             <a class="nav-link page-scroll" href="#header">Home <span
                                     class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <!--<li class="nav-item">
                             <a class="nav-link page-scroll" href="#about">About</a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#team">Team</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#details">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#team">Publications</a>
+                            <a class="nav-link page-scroll" href="#publications">Publications</a>
                         </li>
                         <!--  <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
@@ -128,7 +130,6 @@
         </header> <!-- end of header -->
         <!-- end of header -->
 
-
         <!-- Customers -->
         <div class="slider-1">
             <div class="container">
@@ -165,6 +166,9 @@
                                     <div class="swiper-slide">
                                         <img class="img-fluid" src="images/uchicago.png" alt="alternative">
                                     </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid" src="images/d" alt="alternative">
+                                    </div>
                                     <!--  <div class="swiper-slide">
                                         <img class="img-fluid" src="images/customer-logo-6.png" alt="alternative">
                                     </div>-->
@@ -180,12 +184,104 @@
         <!-- end of customers -->
 
 
+        <div id="team" class="filter bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="h2-heading">Meet the Team</h2>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Filter -->
+                        <div class="button-group filters-button-group">
+                            <button class="button is-checked" data-filter="*">ALL</button>
+                            <button class="button" data-filter=".colgate">Colgate University</button>
+                            <button class="button" data-filter=".cornell">Cornell Tech</button>
+                            <button class="button" data-filter=".uchicago">University Chicago </button>
+                            <button class="button" data-filter=".illinois">University of Illinois at
+                                Urbana-Champaign</button>
+                            <button class="button" data-filter=".nyu">NYU</button>
+                            <button class="button" data-filter=".york">York University</button>
+                        </div> <!-- end of button group -->
+                        <div class="grid">
+                            <div class="element-item colgate">
+                                <a href="https://www.cs.colgate.edu/~napthorpe/index.html">
+                                    <!--   <img class="img-thumbnail" src="images/colgate.png" alt="alternative">-->
+                                    <p>
+                                        <h5>Prof. Noah Apthorpe</h5>
+                                        <h6>Colgate University</h6>
+                                    </p>
+                                </a>
+                            </div>
 
+                            <div class="element-item uchicago">
+                                <a href="https://www.cs.colgate.edu/~napthorpe/index.html">
+                                    <!-- <img class="img-thumbnail" src="images/uchicago.png" alt="alternative">-->
+                                    <p>
+                                        <h5>Prof. Marshini Chetty</h5>
+                                        <h6>University of Chicago</h5>
+                                    </p>
+                                </a>
+                            </div>
 
+                            <div class="element-item uchicago">
+                                <a href="https://jakec007.github.io/aboutme/">
+                                    <!--<img class="img-thumbnail" src="images/uchicago.png" alt="alternative">-->
+                                    <p>
+                                        <h5>Jake Chanenson</h5>
+                                        <h6>University of Chicago</h5>
+                                    </p>
+                                </a>
+                            </div>
 
+                            <div class="element-item nyu">
+                                <a href="https://mlab.engineering.nyu.edu">
+                                    <!--   <img class="img-fluid" src="images/nyu.png" alt="alternative"> -->
+                                    <p>
+                                        <h5>Prof. Danny Y. Huang</h5>
+                                        <h6>New York University</h6>
+                                    </p>
+                                </a>
+                            </div>
 
+                            <div class="element-item illinois">
+                                <a href="https://ischool.illinois.edu/people/madelyn-rose-sanfilippo">
+                                    <!-- <img class="img-fluid" src="images/illinois.png" alt="alternative"> -->
+                                    <p>
+                                        <h5>Prof. Madelyn Rose Sanfilippo</h5>
+                                        <h6>University of Illinois at Urbana-Champaign</h6>
+                                    </p>
+                                </a>
+                            </div>
 
+                            <div class="element-item york">
+                                <a href="https://www.yorku.ca/lassonde/privacy/">
+                                    <!-- <img class="img-fluid" src="images/illinois.png" alt="alternative"> -->
+                                    <p>
+                                        <h5>Prof Yan Shvartzshnaider</h5>
+                                        <h6>York University</h6>
+                                    </p>
+                                </a>
+                            </div>
 
+                            <div class="element-item cornell">
+                                <a href="https://infosci.cornell.edu/content/choksi">
+                                    <!-- <img class="img-fluid" src="images/illinois.png" alt="alternative"> -->
+                                    <p>
+                                        <h5>Madiha Zahrah Choksi</h5>
+                                        <h6>Cornell Tech</h6>
+                                    </p>
+                                </a>
+                            </div>
+
+                        </div> <!-- end of grid -->
+                        <!-- end of filter -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of filter -->
+        <!-- end of projects -->
 
 
 
@@ -204,14 +300,20 @@
         </div> <!-- end of copyright -->
         <!-- end of copyright -->
 
-
+        <!-- Back To Top Button -->
+        <button onclick="topFunction()" id="myBtn">
+            <img src="images/up-arrow.png" alt="alternative">
+        </button>
+        <!-- end of back to top button -->
         <!-- Scripts -->
         <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+        <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
         <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
         <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
         <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
         <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
         <script src="js/scripts.js"></script> <!-- Custom scripts -->
+        <script src="js/scripts_zinc.js"></script> <!-- Custom scripts -->
 
         <!-- FreeForms -->
         <script>
