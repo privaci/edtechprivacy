@@ -27,18 +27,18 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Debug: List files in the build directory before upload
-      - name: List files in build directory
-        run: ls -alh ./build  # Adjust to your actual build directory
+      # Debug: List files at the root (adjust if they are in a folder like public or dist)
+      - name: List files at the root
+        run: ls -alh .  # Adjust to match your build folder if needed (e.g., public, dist)
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build'  # Ensure this is the correct directory
+          path: '.'  # If your HTML files are at the root; change this if they are in a folder like `public`
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
         with:
-          artifact-name: build  # Make sure this matches the uploaded artifact name
+          artifact-name: build  # Match this with the artifact name from the upload step, 'build' is a default, adjust if needed
 
